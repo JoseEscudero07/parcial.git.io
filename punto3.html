@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var empleado = 1;
+        var nombre ;
+        var sueldo =0;
+        var sexo =0 ;
+        var contadorM = 0;
+        var contadorH =0;
+        for(let i=0; i<4; i++)
+        {
+           nombre = prompt("Digite el nombre del empleado N°: " + empleado);
+           sueldo = parseInt(prompt(" Digite el sueldo del empleado N°:" + empleado));
+           alert("ingrese 1 para sexo masculino o 2 para femenino");
+           sexo = parseInt(prompt("Digite el sexo del empleado N°:"+ empleado));
+           if(sexo == 2)
+           {
+               if(sueldo > 500)
+               {
+                 contadorM+=1;
+               }
+           }
+           if(sexo == 1)
+           {
+               if(sueldo < 400)
+               {
+                 contadorH+=1;
+               }
+           }
+
+           empleado++;
+        }
+
+        alert(contadorM+" mujeres ganan mas de 500 pesos");
+        alert(contadorH+" hombres ganan menos de 400 pesos");
+    </script>
+</body>
+</html>
